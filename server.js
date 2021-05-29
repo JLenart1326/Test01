@@ -2,11 +2,10 @@ var express = require("express")
 var app = express()
 var path = require("path")
 var cookieParser = require("cookie-parser");
-var bodyParser = require("body-parser")
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cookieParser())
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 
 
